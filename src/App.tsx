@@ -8,15 +8,17 @@ const App: React.FC = () => {
     firstName: 'Diego',
     lastName: 'Vergara',
   };
+
   function formatName (fn:string, ln: string) {
     return `Employee full name: ${fn} - ${ln}`;
   }
+
 
   return (
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Employee age={33} person={testEmployee} fullName={formatName} />
+        <Employee handleInputChange={e => console.log(e.currentTarget.value)} age={33} person={testEmployee} fullName={formatName} />
       </header>
     </div>
   );
